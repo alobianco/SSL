@@ -1,3 +1,3 @@
 ## Hello World!
-### Compilado en C18
+### Codeado en Visual Studio Code - GCC - Make
 
