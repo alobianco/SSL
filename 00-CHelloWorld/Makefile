@@ -1,6 +1,6 @@
 # Macros
 CC = gcc
-CFLAGS = -g -Wall -O2 -std=c18
+CFLAGS = -g -Wall -std=c18
 SOURCE = hello.c 
 OBJ = hello.o
 BIN = output
