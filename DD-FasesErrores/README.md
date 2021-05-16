@@ -6,7 +6,7 @@ a) Tipear hello2.c:
          Ver archivo hello2.c
 
 b) Preprocesar hello2.c:
-        <strong>Para preprocesar el hello2.c -> gcc -E hello2.c > hello2.i</strong>
+        <p><strong>Para preprocesar el hello2.c -> gcc -E hello2.c > hello2.i</strong></p>
         Al abrir el hello2.i vemos que el preprocesador toma el #include <stdio.h> copia todas las declaraciones de funciones del stdio.h y las pega en la parte superior de nuestro hello.i
         Tambien reemplaza los comentarios escritos en el hello2.c por un espacio.
 
@@ -17,32 +17,32 @@ d) Investivar e indicar la semantica de la primera linea de hello3.c:
         La primera linea del hello3.c se declara una funcion llamada printf, los datos que recibe y los que devuelve, pero no nos explica como funciona
 
 e) Preprocesar hello3.c:
-            <strong>Para preprocesar el hello3.c -> gcc -E hello3.c > hello3.i</strong>
+            <p><strong>Para preprocesar el hello3.c -> gcc -E hello3.c > hello3.i</strong></p>
             Aparecen comentarios especificos del preprocesador, fuera de eso no hay diferencias entre el hello3.c y hello3.i
 
 ### 2- COMPILACIÓN
 
 a) Compilar hello3.i y generar hello3.s:
-        Para realizar esto -> gcc -S hello3.i
+        <p><strong>Para realizar esto -> gcc -S hello3.i</strong></p>
         Nos mostrara los siguientes errores (No warnings):
             hello3.c:5:5: error: expected declaration or statement at end of input
 
 b) Corregir los errores del punto anterior en un hello4.c:
         Se crea un hello4.c corrigiendo esos errores -> Ver hello4.c
         Se genera el hello4.s Para eso:
-            <strong>gcc -S hello4.c -> Se crea hello4.s en Assembler</strong>
+            <p><strong>gcc -S hello4.c -> Se crea hello4.s en Assembler</strong></p>
 
 c) Objetivo del codigo hello4.s:
         Toma nuestro main y como esta lo "traduce" a Assembler. Crea un programa con la misma funcion de nuestro programa en C, asignar un valor a la variable entera i y llamar la funcion prontf.
         Esto no nos dice que el programa funcione, solo traduce lo escrito en C a Assembler
     
 d) Ensamblar el hello4.s:
-       <strong> Para eso as -o hello4.o hello4.s  </strong>
+       <p><strong> Para eso as -o hello4.o hello4.s  </strong></p>
 
 ### 3- VINCULACIÓN
 
 a) Vincular hello4.o con la biblioteca estandar:
-        <strong>Para eso corremos: ld -o hello4 hello4.o </strong>
+        <p><strong>Para eso corremos: ld -o hello4 hello4.o </strong></p>
             Vemos que nos tira diferentes errores al momento de enlazar, no reconoce 'prontf' ni 'main' que aparecen en el codigo de Assembler.
     
 b) Crear hello5.c con los problemas solucionados:
