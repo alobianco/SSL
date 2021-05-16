@@ -6,9 +6,9 @@ a) Tipear hello2.c:
          Ver archivo hello2.c
 
 b) Preprocesar hello2.c:
-        <p><strong>Para preprocesar el hello2.c -> gcc -E hello2.c > hello2.i</strong>
+        <strong>Para preprocesar el hello2.c -> gcc -E hello2.c > hello2.i</strong>
             Al abrir el hello2.i vemos que el preprocesador toma el #include <stdio.h> copia todas las declaraciones de funciones del stdio.h y las pega en la parte superior de nuestro hello.i
-            Tambien reemplaza los comentarios escritos en el hello2.c por un espacio.</p>
+            Tambien reemplaza los comentarios escritos en el hello2.c por un espacio.
 
 c) Tipear hello3.c:
         Ver archivo hello3.c
@@ -17,8 +17,8 @@ d) Investivar e indicar la semantica de la primera linea de hello3.c:
         La primera linea del hello3.c se declara una funcion llamada printf, los datos que recibe y los que devuelve, pero no nos explica como funciona
 
 e) Preprocesar hello3.c:
-        <p><strong>Para preprocesar el hello3.c -> gcc -E hello3.c > hello3.i</strong>
-            Aparecen comentarios especificos del preprocesador, fuera de eso no hay diferencias entre el hello3.c y hello3.i</p>
+            <strong>Para preprocesar el hello3.c -> gcc -E hello3.c > hello3.i</strong>
+            Aparecen comentarios especificos del preprocesador, fuera de eso no hay diferencias entre el hello3.c y hello3.i
 
 ### 2- COMPILACIÓN
 
