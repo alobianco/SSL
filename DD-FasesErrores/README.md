@@ -61,3 +61,28 @@ a) Crear hello6.c con las correciones y compilar:
         El mensaje por pantalla es: "La respuesta es 42".
 
 ### 5- REMOCIÓN DE PROTOTIPO
+
+a) Se crea hello7.c -> Ver hello7.c Compila correctamente
+
+b) hello7.c Compila y ejecuta correctamente a pesar de no incluir el header stdio.h.
+        Esto funciona ya que en C hay prototipos de funciones implicitas, como printf, en C printf se define como -> int printf(); 
+        Recordemos que el #include <stdio.h> no incluye la biblioteca, sino que pega los prototipos de las funciones que se encuentan en ella en nuestro programa a compilar.
+
+### 6- COMPILACIÓN SEPARADA: CONTRATOS Y MÓDULOS
+
+a) Se crea studio1.c -> Ver studio1.c
+
+b) Investigar como lograr que compilen juntos estos archivos .c:
+    Para lograr que puedan generan un ejecutable entre ellos, debemos incluir uno en el otro, eso lo solucionamos con un #include "studio1.c" -> Compilamos con gcc -o hello8 hello8.c y para correr ./hello8
+    Vemos que muestra correctamente el mensaje.
+    Al incluir el studio1.c lo que hacemos es incluir en el Preprocesado el codigo que se encuenta en studio1.c que nos trae la definicion de prontf.
+
+c) Eliminar o agregar elementos a la invocacion de prontf:
+    Agregar:  "prontf ("La respuesta es %d\n", i, h);"
+        error: too many arguments to function 'prontf'
+         El compilador nos dice que no estamos invocando a la funcion prontf de manera correcta, no estamos utilizando la declaracion utilizada. No se puede compilar
+    Eliminar: "prontf ("La respuesta es %d\n");"
+        error: too few arguments to function 'prontf'
+            Al igual que agregando un parametro el compilador nos dice que estamos utilizando de manera incorrecta la declaracion de prontf, esperamos 2 parametros y solo enviamos 1 o ninguno. No se puede compilar
+
+d) 
