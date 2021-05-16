@@ -7,8 +7,8 @@ a) Tipear hello2.c:
 
 b) Preprocesar hello2.c:
         <strong>Para preprocesar el hello2.c -> gcc -E hello2.c > hello2.i</strong>
-            Al abrir el hello2.i vemos que el preprocesador toma el #include <stdio.h> copia todas las declaraciones de funciones del stdio.h y las pega en la parte superior de nuestro hello.i
-            Tambien reemplaza los comentarios escritos en el hello2.c por un espacio.
+        Al abrir el hello2.i vemos que el preprocesador toma el #include <stdio.h> copia todas las declaraciones de funciones del stdio.h y las pega en la parte superior de nuestro hello.i
+        Tambien reemplaza los comentarios escritos en el hello2.c por un espacio.
 
 c) Tipear hello3.c:
         Ver archivo hello3.c
