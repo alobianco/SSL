@@ -85,4 +85,23 @@ c) Eliminar o agregar elementos a la invocacion de prontf:
         error: too few arguments to function 'prontf'
             Al igual que agregando un parametro el compilador nos dice que estamos utilizando de manera incorrecta la declaracion de prontf, esperamos 2 parametros y solo enviamos 1 o ninguno. No se puede compilar
 
-d) 
+d) Creamos studio.h -> hello9.c -> studio2.c
+        Vemos que al compilar, agregando al compilador la instruccion -Wall no nos envia ningun error ni ningun warning, al agregar el #include <stdio.h> 
+        printf nos deja enviar menos argumentos de lo que pide, lo cual trae problemas al ejecutar el programa, distintos overflows son posibles.
+
+
+
+## Bibliotecas
+
+### ¿Qué son?
+        Las bibliotecas son cierto tipo de archivos que se puede importar dentro de nuestro programa. Estos archivos contienen las especificaciones de funciones construidas previamente, por ejemplo leer el teclado o mostrar algo por pantalla.
+        Ayudan a la programacion haciendola mas facil sin tener que codear funciones conocidas una y otra vez.
+### ¿Se pueden distribuir?
+        Las bibliotecas son archivos que pueden ser locales o externos, hay muchas librerias conocidas, como por ejemplo stdio, math, string. Todas estas fueron creadas anteriormente y nosotros las podemos utilizar, esto demuestra que se pueden distribuir
+### ¿Son Portables?
+        Las mismas son portables, ya que para utilizarlas solo tenemos que incluir el archivo de cabecera en nuestro programa, de la forma #include <stdio.h> (En el caso de la biblioteca estandar de C) Tambien se puede incluir un archivo header que este en la misma ruta que nuestro programa C de la siguiente forma #include "nombrebiblioteca.h"
+### ¿Cuales son sus ventajas y desventajas?
+        Las ventajas de las mismas son poder tomar codigo ya escrito para agilizar los tiempos de programacion. No tener que hacer lo mismo una y otra vez.
+        La cantidad de funciones en las bibliotecas de C son gigantes, desde imprimir en pantalla, funciones matematicas, hasta manejo de memoria y manejo de cadenas.
+        Las desventajas pueden ser que hay ciertas funciones que no tiene un limite estipulado, causando problemas al ejecutar, por ejemplo printf. Si se deja un dato sin enviar del prototipo vamos a poner compilar igual y esto trae problemas en la ejecucion. Lo mismo con funciones de manejo de strings, no toman en cuenta el fin de la cadena, hay funciones creadas que no son del todo confiables.
+        A si mismo el manejo de errores de algunas funciones, como las matematicas.
